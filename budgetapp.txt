@@ -1,0 +1,95 @@
+Budget app
+
+angular
+Firebase
+firebae database
+
+user:
+-username
+-UID
+-email
+-income
+-assets
+
+Budgets:
+-Budget ID/BID
+-colaborators via uid
+-monthly total cost
+-monthly total income est
+-monthly total income actual
+-Savings Total
+-Available Credit Lines
+
+Credit Lines:
+-Name of lendor
+-amount of credit line
+-monthly minimum
+-interest
+-notes
+
+Debt:
+-Debtor
+-Amount
+-Notes
+
+Reciepts:
+-location
+-total
+-date
+-image copy
+
+Goals:
+-goal date
+-goal ammount
+-goal note
+
+Budget Items:
+-Name
+-Monthly cost
+-Due Date
+-Frequency
+-Urgency Tier 1/2/3
+-where to pay
+-notes
+
+Multi user budgets
+Projected income
+Actual income 
+Bill dates/cost
+Reminder and alerts
+graphs for breakdown
+spending history 
+data import
+data export
+file storage
+reciept storage/images/scan
+spending by type/item
+savings
+goals
+credit line tracker
+financing tracker
+
+
+Components 
+
+-Dashboard
+    Upcoming bills - right side list
+    Spending Breakdown for month - Pie Graph top left 
+        Add purchase
+        Add income
+    Purchase History - Data table below left side
+    Goals Overview - data table bottom right
+    
+
+-Budgets
+    Budget overview
+    Add budget item
+    Add goal
+    Add user to colaborate
+
+-Profile
+    Update username
+    Update email
+    est yearly/monthly income
+    
+
