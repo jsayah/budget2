@@ -23,6 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './shared/services/auth.service';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BudgetsComponent } from './components/budgets/budgets.component';
+import { BreakdowngraphComponent } from './components/breakdowngraph/breakdowngraph.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -36,6 +39,7 @@ import { BudgetsComponent } from './components/budgets/budgets.component';
     VerifyEmailComponent,
     ProfileComponent,
     BudgetsComponent,
+    BreakdowngraphComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,8 @@ import { BudgetsComponent } from './components/budgets/budgets.component';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     AppRoutingModule,
+    NgxChartsModule,
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
