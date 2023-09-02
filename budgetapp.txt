@@ -86,10 +86,35 @@ Components
     Add budget item
     Add goal
     Add user to colaborate
-
+    Budget Areas
+        - Entertainment
+        - Food
+        - Fuel
+        - Housing
+        - Bills
+        - Saving
 -Profile
     Update username
     Update email
     est yearly/monthly income
     
+Budget Data Structure 
+    itemCost
+    itemName
+    itemDesc
+    uid
+    itemCategory
+    itemDueDate
+    isPaid
+
+Goals Data Structure
+    goalName
+    goalAmount
+    goalDate
+
+Transaction Data Structure
+    transDate
+    transName
+    transAmount
+    transCatagory
 
