@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from '../../shared/services/auth.service';
 import { Service } from 'src/app/shared/services/service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -18,11 +19,17 @@ export class DashboardComponent implements OnInit {
   transCost;
   transName;
   transCatagory;
-
   ngOnInit(): void {
   }
   
+  @ViewChild(NgForm) transForm: NgForm;
+
   addTransaction(){
-    this.service.addTransaction("62289836", this.transCost, "Doe", "Entertainment", "");
+    this.transDate = this.transDate.toString();
+    this.transCost = this.transCost.toString();
+    this.transName = this.transName.toString();
+    this.transCatagory = this.transCatagory.toString();
+    this.service.addTransaction("", this.transName, this.transCost, this.transCatagory, this.transDate, this.authService.userData.uid);
   }
+
 }

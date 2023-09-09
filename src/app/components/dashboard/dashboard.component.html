@@ -121,33 +121,35 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
+                        <form #transform="ngForm">
                         <div class="input-group input-group-sm mb-3">
                           <span class="input-group-text">Date</span>
-                          <input [(ngModel)]="transDate.value" id="transDate" class="form-control" type="date"/>
+                          <input [(ngModel)]="transDate" id="transDate" name="date" class="form-control" type="date"/>
                         </div>
                         <div class="input-group input-group-sm mb-3">
                           <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
-                          <input [(ngModel)]="transName.value" type="any" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                          <input [(ngModel)]="transName" type="any" name="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
                         </div>
                         <div class="input-group input-group-sm mb-3">
                           <span class="input-group-text">$</span>
-                          <input [(ngModel)]="transCost.value" type="any" class="form-control" id="transCost" aria-label="Amount (to the nearest dollar)">
+                          <input [(ngModel)]="transCost" name="cost" type="any" class="form-control" id="transCost" aria-label="Amount (to the nearest dollar)">
                           <span class="input-group-text">.00</span>
                         </div>
                         <div class="input-group input-group-sm mb-3">
-                          <select type="any" [(ngModel)]="transCatagory.value" class="form-select" aria-label="Default select example">
+                          <select type="any" [(ngModel)]="transCatagory" name="cata" class="form-select" aria-label="Default select example">
                             <option selected>Choose Catagory</option>
                             <option value="1">Entertainment</option>
                             <option value="2">Food</option>
                             <option value="3">Fuel</option>
-                            <option value="3">Housing</option>
-                            <option value="3">Bills</option>
+                            <option value="4">Housing</option>
+                            <option value="5">Bills</option>
                           </select>
                         </div>
+                        </form>
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Add Transaction</button>
+                        <button type="submit" (click)="addTransaction()" class="btn btn-primary">Add Transaction</button>
                       </div>
                     </div>
                   </div>
